@@ -1,0 +1,11 @@
+fastapi==0.121.0
+uvicorn==0.38.0
+httpx==0.28.1
+numpy==2.4.6
+scipy==1.17.1
+nibabel==5.4.2
+SimpleITK==2.5.6
+scikit-image==0.25.2
+pillow==13.0.0
+psutil==7.0.0
+jsonschema==4.25.1

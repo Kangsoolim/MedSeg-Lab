@@ -1,0 +1,4 @@
+import {defineConfig} from '@playwright/test';
+import path from 'node:path';
+process.env.MEDSEG_ACCEPTANCE_SHOTS=path.resolve(import.meta.dirname,'../docs/phase2b/regression-screenshots');
+export default defineConfig({testDir:'../tests',testMatch:'**/browser/*.spec.mjs',outputDir:'../tests/browser-results/phase2b-regression',timeout:180000,expect:{timeout:25000},workers:1,reporter:[['list'],['json',{outputFile:'../docs/phase2b/regression-browser-results.json'}]],webServer:{command:'powershell -NoProfile -ExecutionPolicy Bypass -File ../scripts/Serve-Acceptance.ps1',url:'http://127.0.0.1:5174',reuseExistingServer:true,timeout:30000},use:{baseURL:'http://127.0.0.1:5173',viewport:{width:1440,height:900},launchOptions:{executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',args:['--enable-unsafe-swiftshader']},trace:'retain-on-failure'}});

@@ -1,0 +1,4 @@
+# Install Torch separately from the CPU or CUDA index before this file.
+monai==1.6.1
+PyYAML==6.0.3
+matplotlib==3.11.2

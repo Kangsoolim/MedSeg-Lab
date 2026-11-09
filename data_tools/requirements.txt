@@ -1,0 +1,6 @@
+numpy>=1.26
+nibabel>=5.2
+scipy>=1.11
+scikit-image>=0.22
+Pillow>=10
+jsonschema>=4.20

@@ -1,0 +1,251 @@
+[
+  {
+    "name": "contourpy",
+    "version": "1.3.3",
+    "license_expression": null,
+    "license": "BSD 3-Clause License",
+    "project_urls": [
+      "Homepage, https://github.com/contourpy/contourpy",
+      "Changelog, https://contourpy.readthedocs.io/en/latest/changelog.html",
+      "Documentation, https://contourpy.readthedocs.io",
+      "Repository, https://github.com/contourpy/contourpy"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "cycler",
+    "version": "0.12.1",
+    "license_expression": null,
+    "license": "Copyright (c) 2015, matplotlib project",
+    "project_urls": [
+      "homepage, https://matplotlib.org/cycler/",
+      "repository, https://github.com/matplotlib/cycler"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "filelock",
+    "version": "4.2.4",
+    "license_expression": "MIT",
+    "license": "",
+    "project_urls": [
+      "Documentation, https://py-filelock.readthedocs.io",
+      "Homepage, https://github.com/tox-dev/py-filelock",
+      "Source, https://github.com/tox-dev/py-filelock",
+      "Tracker, https://github.com/tox-dev/py-filelock/issues"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "fonttools",
+    "version": "4.68.0",
+    "license_expression": null,
+    "license": "MIT",
+    "project_urls": null,
+    "notices": [
+      "LICENSE",
+      "LICENSE.external"
+    ]
+  },
+  {
+    "name": "fsspec",
+    "version": "2026.9.0",
+    "license_expression": "BSD-3-Clause",
+    "license": "",
+    "project_urls": [
+      "Changelog, https://filesystem-spec.readthedocs.io/en/latest/changelog.html",
+      "Documentation, https://filesystem-spec.readthedocs.io/en/latest/",
+      "Homepage, https://github.com/fsspec/filesystem_spec"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "jinja2",
+    "version": "3.1.6",
+    "license_expression": null,
+    "license": "",
+    "project_urls": [
+      "Changes, https://jinja.palletsprojects.com/changes/",
+      "Chat, https://discord.gg/pallets",
+      "Documentation, https://jinja.palletsprojects.com/",
+      "Donate, https://palletsprojects.com/donate",
+      "Source, https://github.com/pallets/jinja/"
+    ],
+    "notices": [
+      "LICENSE.txt"
+    ]
+  },
+  {
+    "name": "kiwisolver",
+    "version": "1.5.1",
+    "license_expression": null,
+    "license": "=========================",
+    "project_urls": [
+      "homepage, https://github.com/nucleic/kiwi",
+      "documentation, https://kiwisolver.readthedocs.io/en/latest/",
+      "repository, https://github.com/nucleic/kiwi",
+      "changelog, https://github.com/nucleic/kiwi/blob/main/releasenotes.rst"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "markupsafe",
+    "version": "3.0.3",
+    "license_expression": "BSD-3-Clause",
+    "license": "",
+    "project_urls": [
+      "Donate, https://palletsprojects.com/donate",
+      "Documentation, https://markupsafe.palletsprojects.com/",
+      "Changes, https://markupsafe.palletsprojects.com/page/changes/",
+      "Source, https://github.com/pallets/markupsafe/",
+      "Chat, https://discord.gg/pallets"
+    ],
+    "notices": [
+      "LICENSE.txt"
+    ]
+  },
+  {
+    "name": "matplotlib",
+    "version": "3.11.2",
+    "license_expression": null,
+    "license": "License agreement for matplotlib versions 1.3.0 and later",
+    "project_urls": [
+      "Homepage, https://matplotlib.org",
+      "Download, https://matplotlib.org/stable/install/index.html",
+      "Documentation, https://matplotlib.org",
+      "Source Code, https://github.com/matplotlib/matplotlib",
+      "Bug Tracker, https://github.com/matplotlib/matplotlib/issues",
+      "Forum, https://discourse.matplotlib.org/",
+      "Donate, https://numfocus.org/donate-to-matplotlib"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "monai",
+    "version": "1.6.1",
+    "license_expression": null,
+    "license": "Apache License 2.0",
+    "project_urls": [
+      "Homepage, https://project-monai.github.io/",
+      "Documentation, https://monai.readthedocs.io/",
+      "Bug Tracker, https://github.com/Project-MONAI/MONAI/issues",
+      "Source Code, https://github.com/Project-MONAI/MONAI"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "mpmath",
+    "version": "1.3.0",
+    "license_expression": null,
+    "license": "BSD",
+    "project_urls": [
+      "Source, https://github.com/fredrik-johansson/mpmath",
+      "Tracker, https://github.com/fredrik-johansson/mpmath/issues",
+      "Documentation, http://mpmath.org/doc/current/"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "pyparsing",
+    "version": "3.3.3",
+    "license_expression": "MIT",
+    "license": "",
+    "project_urls": [
+      "Documentation, https://pyparsing-docs.readthedocs.io/en/latest/",
+      "Homepage, https://github.com/pyparsing/pyparsing/",
+      "Source, https://github.com/pyparsing/pyparsing.git"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "python-dateutil",
+    "version": "4.0.0",
+    "license_expression": "BSD-3-Clause",
+    "license": "",
+    "project_urls": [
+      "Homepage, https://github.com/dateutil/dateutil",
+      "Documentation, https://dateutil.readthedocs.io/en/stable/",
+      "Source, https://github.com/dateutil/dateutil"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "pyyaml",
+    "version": "6.0.3",
+    "license_expression": null,
+    "license": "MIT",
+    "project_urls": [
+      "Bug Tracker, https://github.com/yaml/pyyaml/issues",
+      "CI, https://github.com/yaml/pyyaml/actions",
+      "Documentation, https://pyyaml.org/wiki/PyYAMLDocumentation",
+      "Mailing lists, http://lists.sourceforge.net/lists/listinfo/yaml-core",
+      "Source Code, https://github.com/yaml/pyyaml"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "sympy",
+    "version": "1.14.0",
+    "license_expression": null,
+    "license": "BSD",
+    "project_urls": [
+      "Source, https://github.com/sympy/sympy"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "torch",
+    "version": "2.8.0+cpu",
+    "license_expression": null,
+    "license": "BSD-3-Clause",
+    "project_urls": [
+      "Homepage, https://pytorch.org/",
+      "Documentation, https://pytorch.org/docs/",
+      "Source, https://github.com/pytorch/pytorch",
+      "Forum, https://discuss.pytorch.org/"
+    ],
+    "notices": [
+      "LICENSE",
+      "NOTICE"
+    ]
+  },
+  {
+    "name": "tzdata",
+    "version": "2026.6",
+    "license_expression": null,
+    "license": "Apache-2.0",
+    "project_urls": [
+      "Bug Reports, https://github.com/python/tzdata/issues",
+      "Source, https://github.com/python/tzdata",
+      "Documentation, https://tzdata.python.org"
+    ],
+    "notices": [
+      "LICENSE",
+      "LICENSE_APACHE"
+    ]
+  }
+]

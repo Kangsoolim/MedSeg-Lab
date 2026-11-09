@@ -1,0 +1,3 @@
+# Default install: imaging/analysis + Traditional V2; no neural/CUDA requirement.
+-r requirements-core.lock.txt
+# Optional: install Torch from its CPU/CUDA wheel index, then requirements-neural.txt.

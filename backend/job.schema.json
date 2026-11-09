@@ -1,0 +1,139 @@
+{
+  "$defs": {
+    "Parameters": {
+      "additionalProperties": false,
+      "properties": {
+        "seed": {
+          "anyOf": [
+            {
+              "maxItems": 3,
+              "minItems": 3,
+              "prefixItems": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Seed"
+        },
+        "roi": {
+          "anyOf": [
+            {
+              "maxItems": 6,
+              "minItems": 6,
+              "prefixItems": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Roi"
+        },
+        "iterations": {
+          "default": 2,
+          "maximum": 10,
+          "minimum": 0,
+          "title": "Iterations",
+          "type": "integer"
+        },
+        "multiplier": {
+          "default": 2.0,
+          "exclusiveMinimum": 0,
+          "maximum": 10,
+          "title": "Multiplier",
+          "type": "number"
+        },
+        "radius": {
+          "default": 1,
+          "maximum": 5,
+          "minimum": 1,
+          "title": "Radius",
+          "type": "integer"
+        },
+        "opening_mm": {
+          "default": 1.0,
+          "maximum": 5,
+          "minimum": 0,
+          "title": "Opening Mm",
+          "type": "number"
+        },
+        "seed_component": {
+          "const": true,
+          "default": true,
+          "title": "Seed Component",
+          "type": "boolean"
+        },
+        "device": {
+          "default": "auto",
+          "enum": [
+            "auto",
+            "cpu",
+            "cuda"
+          ],
+          "title": "Device",
+          "type": "string"
+        }
+      },
+      "title": "Parameters",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "case_id": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$",
+      "title": "Case Id",
+      "type": "string"
+    },
+    "algorithm": {
+      "enum": [
+        "traditional_v2",
+        "unet_e17"
+      ],
+      "title": "Algorithm",
+      "type": "string"
+    },
+    "parameters": {
+      "$ref": "#/$defs/Parameters"
+    }
+  },
+  "required": [
+    "case_id",
+    "algorithm"
+  ],
+  "title": "JobRequest",
+  "type": "object"
+}

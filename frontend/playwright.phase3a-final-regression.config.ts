@@ -1,0 +1,6 @@
+import {defineConfig} from '@playwright/test';
+import path from 'node:path';import fs from 'node:fs';
+process.env.MEDSEG_ACCEPTANCE_SHOTS=path.resolve('../docs/phase3a-final/regression/screenshots');
+process.env.MEDSEG_REGRESSION_OUTPUT=path.resolve('../docs/phase3a-final/regression');
+fs.mkdirSync(process.env.MEDSEG_ACCEPTANCE_SHOTS,{recursive:true});
+export default defineConfig({testDir:'../tests',testMatch:['browser/phase2a.spec.mjs','browser/workstation.spec.mjs','phase2b-final-browser/final.spec.mjs'],grep:/seed inverse|real V2 browser|real E17 browser|persistent history|additional real spleen3|real CT-only|disconnected backend|real error chart|real interactive 3D|every displayed metric|E17 E20 E27|frozen method comparison|single inference experiment|frozen browser CSV/,outputDir:'../tests/browser-results/phase3a-final-regression',timeout:300000,expect:{timeout:30000},workers:1,reporter:[['list'],['json',{outputFile:'../docs/phase3a-final/regression-browser-results.json'}]],use:{baseURL:'http://127.0.0.1:5173',viewport:{width:1440,height:1000},launchOptions:{executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',args:['--enable-unsafe-swiftshader']},trace:'retain-on-failure'}});

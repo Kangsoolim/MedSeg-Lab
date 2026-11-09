@@ -1,0 +1,10 @@
+# Release manifest hashes require exact bytes on every checkout.
+* -text
+# Audited course modules must retain exact bytes on every checkout.
+backend/vendor/*.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+backend/vendor/training/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Native checkpoints fingerprint executing wrapper bytes as well as vendor code.
+backend/training_adapter.py -text
+backend/training_worker.py -text
+backend/training_data.py -text
+backend/training_contracts.py -text

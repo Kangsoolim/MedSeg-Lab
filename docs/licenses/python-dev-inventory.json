@@ -1,0 +1,71 @@
+[
+  {
+    "name": "pytest",
+    "version": "8.4.2",
+    "license_expression": "MIT",
+    "project_urls": [
+      "Changelog, https://docs.pytest.org/en/stable/changelog.html",
+      "Contact, https://docs.pytest.org/en/stable/contact.html",
+      "Funding, https://docs.pytest.org/en/stable/sponsor.html",
+      "Homepage, https://docs.pytest.org/en/latest/",
+      "Source, https://github.com/pytest-dev/pytest",
+      "Tracker, https://github.com/pytest-dev/pytest/issues"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "colorama",
+    "version": "0.4.6",
+    "license_expression": "BSD-3-Clause",
+    "project_urls": [
+      "Homepage, https://github.com/tartley/colorama"
+    ],
+    "notices": [
+      "LICENSE.txt"
+    ]
+  },
+  {
+    "name": "iniconfig",
+    "version": "2.3.1",
+    "license_expression": "MIT",
+    "project_urls": [
+      "Homepage, https://github.com/pytest-dev/iniconfig"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "pluggy",
+    "version": "1.7.0",
+    "license_expression": "MIT",
+    "project_urls": [
+      "Homepage, https://github.com/pytest-dev/pluggy",
+      "Documentation, https://pluggy.readthedocs.io/",
+      "Changelog, https://pluggy.readthedocs.io/en/latest/changelog.html",
+      "Repository, https://github.com/pytest-dev/pluggy",
+      "Issues, https://github.com/pytest-dev/pluggy/issues",
+      "Funding, https://tidelift.com/subscription/pkg/pypi-pluggy"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  },
+  {
+    "name": "pygments",
+    "version": "2.21.0",
+    "license_expression": "BSD-2-Clause",
+    "project_urls": [
+      "Homepage, https://pygments.org",
+      "Documentation, https://pygments.org/docs",
+      "Source, https://github.com/pygments/pygments",
+      "Bug Tracker, https://github.com/pygments/pygments/issues",
+      "Changelog, https://github.com/pygments/pygments/blob/master/CHANGES"
+    ],
+    "notices": [
+      "LICENSE"
+    ]
+  }
+]

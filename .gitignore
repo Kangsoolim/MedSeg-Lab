@@ -1,0 +1,75 @@
+docs/phase3b/
+.release-qa/
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+# Local scientific resources and derived medical content stay out of Git.
+*.nii
+*.nii.gz
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.npy
+*.npz
+*.mesh
+frontend/public/demo/
+frontend/dist/
+demo/
+.pnpm-store/
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+*.tsbuildinfo
+.pytest_cache/
+.env
+.env.*
+!.env.example
+*.log
+tests/browser-results/
+tests/tmp*/
+docs/screenshots/
+docs/ui-concept.png
+docs/source-before.json
+docs/source-integrity.json
+docs/*results.json
+docs/*-qa.json
+docs/data-audit.json
+docs/phase1_1-*.json
+
+docs/final-acceptance/
+# Local audit records and private machine directories are not release sources.
+docs/*source-verification.json
+.aws/
+.ssh/
+.codex/
+.agents/
+*.dcm
+*.dicom
+*.mha
+*.mhd
+*.nrrd
+*.safetensors
+
+runs/
+backend/.venv/
+backend/config.local.json
+docs/phase2a/
+docs/phase2a-final/
+
+docs/phase2b/
+frontend/public/training/
+
+# Private final acceptance evidence, including local Git freeze receipts.
+docs/phase2b-final/
+
+# Private live-training QA evidence
+docs/phase3a/
+
+# Independent Phase 3A acceptance evidence and local freeze receipt.
+docs/phase3a-final/
+
+# Private release acceptance logs and resources.
+.release-private/

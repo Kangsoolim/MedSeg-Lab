@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'../tests/phase2b-browser',outputDir:'../tests/browser-results/phase2b',timeout:180000,expect:{timeout:20000},workers:1,reporter:[['list'],['json',{outputFile:'../docs/phase2b/browser-results.json'}]],use:{baseURL:'http://127.0.0.1:5173',viewport:{width:1440,height:900},launchOptions:{executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',args:['--enable-unsafe-swiftshader']},trace:'retain-on-failure'}});

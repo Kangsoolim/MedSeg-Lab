@@ -1,0 +1,187 @@
+{
+  "origin_archive": "medseg-lab-phase3b-source-candidate-r2.zip",
+  "origin_archive_sha256": "2097760079eb4214743c236b290dca1def90a846ca0694414cfa0d57326703e9",
+  "origin_payload_files": 328,
+  "origin_vs_development_payload_differences": 0,
+  "excluded_development_worktree_files": 39,
+  "modified": {
+    ".gitattributes": {
+      "original": {
+        "bytes": 470,
+        "sha256": "8c2e33fefeda997b881ed579b0a849ee1be1b29ccd7fe9b125202d5268be8809"
+      },
+      "candidate": {
+        "bytes": 553,
+        "sha256": "911316303bb83c5430f695e65fb7a017cc0644737080bdcb95eabe0c66687245"
+      }
+    },
+    ".gitignore": {
+      "original": {
+        "bytes": 1142,
+        "sha256": "911b4952614757db7e727bb804f966e70fd1e6ee70fd7c22a7448d44764d1da6"
+      },
+      "candidate": {
+        "bytes": 1285,
+        "sha256": "d0a43a21c6a7ffd4cad95389bc5963fd80324980814afbef344fafa3a0ba45f8"
+      }
+    },
+    "README.md": {
+      "original": {
+        "bytes": 7357,
+        "sha256": "7ca7185dce4d9dd351673a5b8bfae254af1d18272909b06797c459a096fe475f"
+      },
+      "candidate": {
+        "bytes": 7710,
+        "sha256": "ecfbb4b0b294cbd10511bc408a2e776f98ce77dd9cc595c27559cbb2e57bc224"
+      }
+    },
+    "backend/requirements-dev.txt": {
+      "original": {
+        "bytes": 44,
+        "sha256": "86a4eb069783f4c9f616a5db75a72f074e286f86942637f2fdb8972874a264c9"
+      },
+      "candidate": {
+        "bytes": 177,
+        "sha256": "d89f8d45e341b94d6c096aee8ed6616333e0e03e820b1177dc32c0f3f404bb71"
+      }
+    },
+    "data_tools/export_package.py": {
+      "original": {
+        "bytes": 25163,
+        "sha256": "a5dae22fe8a18c1ecec45be66dad850e10c88a1e0adceceaa8ae7de0203fb470"
+      },
+      "candidate": {
+        "bytes": 24897,
+        "sha256": "53e60f155ed36a67341bf6bada03d4adffe2a09915fd85ad0a7b0c7202a730e4"
+      }
+    },
+    "data_tools/verify_delivery.py": {
+      "original": {
+        "bytes": 3031,
+        "sha256": "a8c7da3f5b6c239bec42df7577d745bbb7f777301880fa543ca321e8536e364c"
+      },
+      "candidate": {
+        "bytes": 3025,
+        "sha256": "bdb5f62926bd6a2de2b09cbb820b525ddfff85452c17b767aa40b58a0a3507a7"
+      }
+    },
+    "docs/INSTALLATION.md": {
+      "original": {
+        "bytes": 4879,
+        "sha256": "6094e0a24aa7c562b518a5d32aa60804408338e3caa1685b00954902635f7381"
+      },
+      "candidate": {
+        "bytes": 5441,
+        "sha256": "5cbbffaaa71ddc6eb3fad6899105472812c2a75dd7592288a70d775b806f24b5"
+      }
+    },
+    "docs/RELEASE_HANDOFF.md": {
+      "original": {
+        "bytes": 5781,
+        "sha256": "a6665cbbffcf6f59adf85572e8590fb217550d9cffc03e0fdb9455660ff0b3a5"
+      },
+      "candidate": {
+        "bytes": 6166,
+        "sha256": "34d2e0dfef4bd14a7da257c7df27f692950e2095cc5f9e122935619a6ce5db73"
+      }
+    },
+    "docs/RELEASE_READINESS.md": {
+      "original": {
+        "bytes": 5235,
+        "sha256": "fba703a99b0c1d4fa3dd07bafeb9d699b67471d791102838340e50d84bea6457"
+      },
+      "candidate": {
+        "bytes": 5606,
+        "sha256": "893076c9788afa67df7237fde1f58e7e8f543e767dc24eba317949ef00df6fbd"
+      }
+    },
+    "docs/THIRD_PARTY_LICENSES.md": {
+      "original": {
+        "bytes": 4502,
+        "sha256": "092a978ebacbbafcd8c88e7fd17d06a277dcc746c317f6007a3c2e1aff68e1e8"
+      },
+      "candidate": {
+        "bytes": 4950,
+        "sha256": "61f734e22b737e64b384bd6e251e680a9fee2e74e2cae70ac2b71b3f40f039a9"
+      }
+    },
+    "docs/TRAINING_IMPORT.md": {
+      "original": {
+        "bytes": 5340,
+        "sha256": "edc45dca719df53542ae30e3c0a2710ac012821729140ef052ef51a5f113949b"
+      },
+      "candidate": {
+        "bytes": 4692,
+        "sha256": "923a3c166a57ebc0a4ed45b30b587b91004aed1f2f474bbe58020f9df7156d50"
+      }
+    },
+    "frontend/package.json": {
+      "original": {
+        "bytes": 947,
+        "sha256": "e01ef1b4c17c36af1ef10830e6359c47b46e83debaeb208938ff008b71b08ea1"
+      },
+      "candidate": {
+        "bytes": 982,
+        "sha256": "2a6013bceeea612a51ba54c8d5be1b56cd5e243a33356e36458fc5602e1910e8"
+      }
+    },
+    "tests/browser/phase2a.spec.mjs": {
+      "original": {
+        "bytes": 13320,
+        "sha256": "d26a8bae9fccb4835d5e860374f95d0403b655fb8b3e31e70789586860e109e6"
+      },
+      "candidate": {
+        "bytes": 13341,
+        "sha256": "5bf314df2296d3d1324ad70d5def85847fd96d246e06a7294409414b3a9a8c61"
+      }
+    },
+    "tests/final-browser/phase2a_final.spec.mjs": {
+      "original": {
+        "bytes": 12907,
+        "sha256": "c552f76d9ba5e6d793710f0953ceac58d306816f08f3b9558e846ab47bca8125"
+      },
+      "candidate": {
+        "bytes": 13026,
+        "sha256": "d5a30e634b36bd98ffe2483f62a7c8b61dfe785266cee2063fbfcdb002e544dd"
+      }
+    },
+    "tests/phase3b-browser/phase3b.cjs": {
+      "original": {
+        "bytes": 5464,
+        "sha256": "f9a35cf32f5aea6bf691160f576906873684e0f7ff5f0133f0ff5804c6c30369"
+      },
+      "candidate": {
+        "bytes": 5494,
+        "sha256": "a21332489f7dc8d7b4c3b7f77572f38410c73d43cc8a41d2c787fc5815dfb4eb"
+      }
+    },
+    "tests/test_adapter.py": {
+      "original": {
+        "bytes": 8765,
+        "sha256": "0d5f162c18dcc75b04b7a5e1ffbb2c3ea946fcafdae64d041e3770eb8a707d30"
+      },
+      "candidate": {
+        "bytes": 8769,
+        "sha256": "8d9b7a31bb68d5c1e87d300321677b1094aef9a26916727e57bb36d38820c245"
+      }
+    }
+  },
+  "added": [
+    "docs/CLEAN_REPOSITORY_SETUP.md",
+    "docs/PUBLICATION_CHECKLIST.md",
+    "docs/PUBLIC_SOURCE_AUDIT.md",
+    "docs/RELEASE_CANDIDATE_HANDOFF.md",
+    "docs/RELEASE_CANDIDATE_QA.md",
+    "docs/RELEASE_SOURCE_CHANGES.json",
+    "docs/licenses/python-dev-inventory.json",
+    "docs/licenses/python/colorama-0.4.6/LICENSE.txt",
+    "docs/licenses/python/iniconfig-2.3.1/LICENSE",
+    "docs/licenses/python/pluggy-1.7.0/LICENSE",
+    "docs/licenses/python/pygments-2.21.0/LICENSE",
+    "docs/licenses/python/pytest-8.4.2/LICENSE",
+    "frontend/public/favicon.svg",
+    "scripts/Verify-PublicSource.py"
+  ],
+  "removed": [],
+  "reason": "Explicit candidate-only portability/privacy, browser-fixture, favicon, version, complete test notices/pins and release audit updates. No development worktree overlay; algorithm/vendor/checkpoint safety bodies retained."
+}

@@ -1,0 +1,10 @@
+{
+ "case_id":"my_aligned_ct",
+ "title":"My local aligned CT",
+ "ct":"E:/my_local_data/ct.nii.gz",
+ "gt":"E:/my_local_data/gt.nii.gz",
+ "predictions":[
+  {"id":"baseline","name":"Baseline","version":"frozen-v1","color_key":"traditional","path":"E:/my_local_data/baseline.nii.gz"},
+  {"id":"model_a","name":"Model A","version":"checkpoint-frozen","color_key":"unet","path":"E:/my_local_data/prediction.nii.gz"}
+ ]
+}

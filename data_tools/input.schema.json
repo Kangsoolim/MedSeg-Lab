@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MedSeg-Lab aligned CT import specification",
+  "type": "object",
+  "required": ["case_id", "ct", "predictions"],
+  "properties": {
+    "case_id": {"type":"string","pattern":"^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$"},
+    "title": {"type":"string"},
+    "ct": {"type":"string","minLength":1,"description":"Absolute local 3D CT NIfTI path; explicit mm units"},
+    "gt": {"type":["string","null"],"description":"Optional aligned binary ground truth"},
+    "predictions": {"type":"array","minItems":1,"items":{
+      "type":"object","required":["id","path"],
+      "properties":{
+        "id":{"type":"string","pattern":"^[A-Za-z0-9][A-Za-z0-9_-]{0,79}$","description":"Unique method id, excluding ct, gt, meshes, labels, case, index and another method's _error namespace"},
+        "path":{"type":"string","minLength":1},
+        "name":{"type":"string"},
+        "version":{"type":"string"},
+        "color_key":{"enum":["traditional","unet"]}
+      },"additionalProperties":false
+    }}
+  },"additionalProperties":false
+}

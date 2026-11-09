@@ -1,0 +1,577 @@
+{
+  "schema_version": 2,
+  "TrainingConfig": {
+    "additionalProperties": false,
+    "properties": {
+      "adapter": {
+        "const": "monai-resunet-v1",
+        "default": "monai-resunet-v1",
+        "title": "Adapter",
+        "type": "string"
+      },
+      "dataset": {
+        "default": "course",
+        "enum": [
+          "course",
+          "registered"
+        ],
+        "title": "Dataset",
+        "type": "string"
+      },
+      "train_ids": {
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 100,
+        "title": "Train Ids",
+        "type": "array"
+      },
+      "val_ids": {
+        "items": {
+          "type": "string"
+        },
+        "maxItems": 100,
+        "title": "Val Ids",
+        "type": "array"
+      },
+      "patient_ids": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "maxProperties": 100,
+        "title": "Patient Ids",
+        "type": "object"
+      },
+      "epochs": {
+        "default": 50,
+        "maximum": 60,
+        "minimum": 1,
+        "title": "Epochs",
+        "type": "integer"
+      },
+      "batch_size": {
+        "default": 4,
+        "maximum": 4,
+        "minimum": 1,
+        "title": "Batch Size",
+        "type": "integer"
+      },
+      "learning_rate": {
+        "default": 0.001,
+        "exclusiveMinimum": 0,
+        "maximum": 0.01,
+        "title": "Learning Rate",
+        "type": "number"
+      },
+      "seed": {
+        "default": 42,
+        "maximum": 2147483647,
+        "minimum": 0,
+        "title": "Seed",
+        "type": "integer"
+      },
+      "patience": {
+        "default": 10,
+        "maximum": 60,
+        "minimum": 1,
+        "title": "Patience",
+        "type": "integer"
+      },
+      "min_delta": {
+        "default": 0.0001,
+        "maximum": 1,
+        "minimum": 0,
+        "title": "Min Delta",
+        "type": "number"
+      },
+      "amp": {
+        "default": true,
+        "title": "Amp",
+        "type": "boolean"
+      },
+      "device": {
+        "default": "cuda",
+        "enum": [
+          "cpu",
+          "cuda"
+        ],
+        "title": "Device",
+        "type": "string"
+      },
+      "checkpoint_policy": {
+        "default": "last_best",
+        "enum": [
+          "last_best",
+          "every_epoch"
+        ],
+        "title": "Checkpoint Policy",
+        "type": "string"
+      },
+      "preview_every": {
+        "default": 1,
+        "maximum": 60,
+        "minimum": 1,
+        "title": "Preview Every",
+        "type": "integer"
+      },
+      "engineering_smoke": {
+        "default": false,
+        "title": "Engineering Smoke",
+        "type": "boolean"
+      },
+      "max_train_batches": {
+        "anyOf": [
+          {
+            "maximum": 8,
+            "minimum": 1,
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Max Train Batches"
+      }
+    },
+    "title": "TrainingConfig",
+    "type": "object"
+  },
+  "StartTraining": {
+    "$defs": {
+      "TrainingConfig": {
+        "additionalProperties": false,
+        "properties": {
+          "adapter": {
+            "const": "monai-resunet-v1",
+            "default": "monai-resunet-v1",
+            "title": "Adapter",
+            "type": "string"
+          },
+          "dataset": {
+            "default": "course",
+            "enum": [
+              "course",
+              "registered"
+            ],
+            "title": "Dataset",
+            "type": "string"
+          },
+          "train_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 100,
+            "title": "Train Ids",
+            "type": "array"
+          },
+          "val_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 100,
+            "title": "Val Ids",
+            "type": "array"
+          },
+          "patient_ids": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "maxProperties": 100,
+            "title": "Patient Ids",
+            "type": "object"
+          },
+          "epochs": {
+            "default": 50,
+            "maximum": 60,
+            "minimum": 1,
+            "title": "Epochs",
+            "type": "integer"
+          },
+          "batch_size": {
+            "default": 4,
+            "maximum": 4,
+            "minimum": 1,
+            "title": "Batch Size",
+            "type": "integer"
+          },
+          "learning_rate": {
+            "default": 0.001,
+            "exclusiveMinimum": 0,
+            "maximum": 0.01,
+            "title": "Learning Rate",
+            "type": "number"
+          },
+          "seed": {
+            "default": 42,
+            "maximum": 2147483647,
+            "minimum": 0,
+            "title": "Seed",
+            "type": "integer"
+          },
+          "patience": {
+            "default": 10,
+            "maximum": 60,
+            "minimum": 1,
+            "title": "Patience",
+            "type": "integer"
+          },
+          "min_delta": {
+            "default": 0.0001,
+            "maximum": 1,
+            "minimum": 0,
+            "title": "Min Delta",
+            "type": "number"
+          },
+          "amp": {
+            "default": true,
+            "title": "Amp",
+            "type": "boolean"
+          },
+          "device": {
+            "default": "cuda",
+            "enum": [
+              "cpu",
+              "cuda"
+            ],
+            "title": "Device",
+            "type": "string"
+          },
+          "checkpoint_policy": {
+            "default": "last_best",
+            "enum": [
+              "last_best",
+              "every_epoch"
+            ],
+            "title": "Checkpoint Policy",
+            "type": "string"
+          },
+          "preview_every": {
+            "default": 1,
+            "maximum": 60,
+            "minimum": 1,
+            "title": "Preview Every",
+            "type": "integer"
+          },
+          "engineering_smoke": {
+            "default": false,
+            "title": "Engineering Smoke",
+            "type": "boolean"
+          },
+          "max_train_batches": {
+            "anyOf": [
+              {
+                "maximum": 8,
+                "minimum": 1,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Max Train Batches"
+          }
+        },
+        "title": "TrainingConfig",
+        "type": "object"
+      }
+    },
+    "additionalProperties": false,
+    "properties": {
+      "config": {
+        "$ref": "#/$defs/TrainingConfig"
+      },
+      "preflight_id": {
+        "title": "Preflight Id",
+        "type": "string"
+      },
+      "request_id": {
+        "pattern": "^[a-f0-9]{32}$",
+        "title": "Request Id",
+        "type": "string"
+      },
+      "confirm": {
+        "const": "START REAL TRAINING",
+        "title": "Confirm",
+        "type": "string"
+      },
+      "resume_run_id": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Resume Run Id"
+      },
+      "checkpoint": {
+        "default": "last.pt",
+        "enum": [
+          "last.pt",
+          "best.pt"
+        ],
+        "title": "Checkpoint",
+        "type": "string"
+      }
+    },
+    "required": [
+      "config",
+      "preflight_id",
+      "request_id",
+      "confirm"
+    ],
+    "title": "StartTraining",
+    "type": "object"
+  },
+  "ResumePreflight": {
+    "$defs": {
+      "TrainingConfig": {
+        "additionalProperties": false,
+        "properties": {
+          "adapter": {
+            "const": "monai-resunet-v1",
+            "default": "monai-resunet-v1",
+            "title": "Adapter",
+            "type": "string"
+          },
+          "dataset": {
+            "default": "course",
+            "enum": [
+              "course",
+              "registered"
+            ],
+            "title": "Dataset",
+            "type": "string"
+          },
+          "train_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 100,
+            "title": "Train Ids",
+            "type": "array"
+          },
+          "val_ids": {
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 100,
+            "title": "Val Ids",
+            "type": "array"
+          },
+          "patient_ids": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "maxProperties": 100,
+            "title": "Patient Ids",
+            "type": "object"
+          },
+          "epochs": {
+            "default": 50,
+            "maximum": 60,
+            "minimum": 1,
+            "title": "Epochs",
+            "type": "integer"
+          },
+          "batch_size": {
+            "default": 4,
+            "maximum": 4,
+            "minimum": 1,
+            "title": "Batch Size",
+            "type": "integer"
+          },
+          "learning_rate": {
+            "default": 0.001,
+            "exclusiveMinimum": 0,
+            "maximum": 0.01,
+            "title": "Learning Rate",
+            "type": "number"
+          },
+          "seed": {
+            "default": 42,
+            "maximum": 2147483647,
+            "minimum": 0,
+            "title": "Seed",
+            "type": "integer"
+          },
+          "patience": {
+            "default": 10,
+            "maximum": 60,
+            "minimum": 1,
+            "title": "Patience",
+            "type": "integer"
+          },
+          "min_delta": {
+            "default": 0.0001,
+            "maximum": 1,
+            "minimum": 0,
+            "title": "Min Delta",
+            "type": "number"
+          },
+          "amp": {
+            "default": true,
+            "title": "Amp",
+            "type": "boolean"
+          },
+          "device": {
+            "default": "cuda",
+            "enum": [
+              "cpu",
+              "cuda"
+            ],
+            "title": "Device",
+            "type": "string"
+          },
+          "checkpoint_policy": {
+            "default": "last_best",
+            "enum": [
+              "last_best",
+              "every_epoch"
+            ],
+            "title": "Checkpoint Policy",
+            "type": "string"
+          },
+          "preview_every": {
+            "default": 1,
+            "maximum": 60,
+            "minimum": 1,
+            "title": "Preview Every",
+            "type": "integer"
+          },
+          "engineering_smoke": {
+            "default": false,
+            "title": "Engineering Smoke",
+            "type": "boolean"
+          },
+          "max_train_batches": {
+            "anyOf": [
+              {
+                "maximum": 8,
+                "minimum": 1,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Max Train Batches"
+          }
+        },
+        "title": "TrainingConfig",
+        "type": "object"
+      }
+    },
+    "properties": {
+      "config": {
+        "$ref": "#/$defs/TrainingConfig"
+      },
+      "resume_run_id": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Resume Run Id"
+      },
+      "checkpoint": {
+        "default": "last.pt",
+        "enum": [
+          "last.pt",
+          "best.pt"
+        ],
+        "title": "Checkpoint",
+        "type": "string"
+      }
+    },
+    "required": [
+      "config"
+    ],
+    "title": "ResumePreflight",
+    "type": "object"
+  },
+  "LiveTrainingEvent": {
+    "additionalProperties": true,
+    "description": "v2 envelope; adapter fields extend the common historical event vocabulary.",
+    "properties": {
+      "schema_version": {
+        "const": 2,
+        "default": 2,
+        "title": "Schema Version",
+        "type": "integer"
+      },
+      "run_id": {
+        "pattern": "^[a-f0-9-]{36}$",
+        "title": "Run Id",
+        "type": "string"
+      },
+      "sequence": {
+        "minimum": 1,
+        "title": "Sequence",
+        "type": "integer"
+      },
+      "event_id": {
+        "title": "Event Id",
+        "type": "string"
+      },
+      "timestamp": {
+        "format": "date-time",
+        "title": "Timestamp",
+        "type": "string"
+      },
+      "event_type": {
+        "enum": [
+          "status",
+          "log",
+          "batch",
+          "metric",
+          "checkpoint",
+          "epoch_start",
+          "epoch_end",
+          "validation_end",
+          "resumed",
+          "terminal"
+        ],
+        "title": "Event Type",
+        "type": "string"
+      },
+      "epoch": {
+        "minimum": 0,
+        "title": "Epoch",
+        "type": "integer"
+      },
+      "step": {
+        "anyOf": [
+          {
+            "minimum": 0,
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "default": null,
+        "title": "Step"
+      }
+    },
+    "required": [
+      "run_id",
+      "sequence",
+      "event_id",
+      "timestamp",
+      "event_type",
+      "epoch"
+    ],
+    "title": "LiveTrainingEvent",
+    "type": "object"
+  }
+}
